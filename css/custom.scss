@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$font-family-titulo: 'Akshar', sans-serif;
+$font-family-base: 'Raleway', sans-serif;
+$font-family-market: 'Raleway', sans-serif;
+$btn-tienda: #F28322;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+body {
+    background-color: black;
+}
+
+
+/* Aqui se trabaja el Navbar, recordar que el Navbar se aplica dentro del Header.   */
+
+.navbar {
+    background-color: black;
+    
+}
+
+.navbar__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.navbar button {
+    color: #F28322;
+}
+
+
+
+.navbar .navbar-brand {
+    font-family: $font-family-market;
+    color: #F28322;
+
+}
+
+.navbar .collapse .navbar-nav a {
+    font-size: 1em;
+    color: #F28322;
+}
+
+.navbar a i {
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 1em;
+    color: #F28322;
+}
+
+
+
+/* Aqui se trabaja el Header  */
+
+
+.header .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .carousel .carousel-item__1 {
+    background:  url(../imagenes/Banner/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.header .carousel .carousel-item__2 {
+    background:  url(../imagenes/Banner/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.header .carousel .carousel-item__3 {
+    background:  url(../imagenes/Banner/banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.header .carousel .carousel-item__1 h5 {
+    font-family: $font-family-titulo;
+    color: #F28322;
+    font-size: 10em;
+}
+
+.header .carousel .carousel-item__1 h3 {
+    font-size: 2em;
+    color: white;
+    margin-left: 1em;
+}
+
+.header .carousel .carousel-item__2 h5 {
+    font-family: $font-family-titulo;
+    color: red;
+    font-size: 10em;
+}
+
+.header .carousel .carousel-item__2 h3 {
+    font-size: 2em;
+    color: white;
+    margin-left: 1em;
+}
+
+.header .carousel .carousel-item__3 h5 {
+    font-family: $font-family-titulo;
+    color: purple;
+    font-size: 10em;
+}
+
+.header .carousel .carousel-item__3 h3 {
+    font-size: 2em;
+    color: white;
+    margin-left: 1em;
+}
+
+/* Aqui se trabaja el Footer */
+
+.footer {
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.footer__items i {
+    margin: 0 1em 0 1em;
+    font-size: 2em;
+    color: #F28322;
+}
+
+
+.us {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0.3,0,0,0.3)), url(../imagenes/Banner/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.us__text {
+    padding: 1em;
+}
+
+.us .grande {
+    padding: 1em;
+}
+
+.us .mediano {
+    display: none;
+}
+
+.us .us__text .btn-tienda {
+    color: white;
+    background-color: #F28322;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .navbar a  {
+        text-align: left;
+    }
+
+    .navbar a i {
+        display: none;
+    }
+    
+    .header .carousel-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .us {
+        flex: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: flex-start;
+        
+    }
+
+    .us__local {
+        margin: 0;
+        padding: 0;
+    }
+
+    .us .grande {
+        display: none;
+    }
+
+    .us .mediano {
+        display: flex;
+        margin-bottom: 1em;
+    }
+
+    .header .carousel .carousel-item h5 {
+        text-align: center;
+        font-family: $font-family-titulo;
+        color: #F28322;
+        font-size: 10em;
+    }
+
+    .header .carousel .carousel-item h3 {
+        font-size: 3em;
+        color: white;
+        margin-left: 1em;
+    }
+
+}
+ 
+
+@media screen and (max-width: 800px) {
+
+    .header .carousel-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+
+    .header .carousel .carousel-item h5 {
+        text-align: center;
+        font-family: $font-family-titulo;
+        color: #F28322;
+        font-size: 5em;
+    }
+
+    .header .carousel .carousel-item h3 {
+        font-size: 1em;
+        color: white;
+        margin-left: 1em;
+    }
+
+    .us .grande {
+        display: none;
+    }
+
+    .us .mediano {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 300px) {
+
+
+    .navbar a  {
+        margin: 0;
+        text-align: center;
+    }
+
+
+
+    .header .carousel-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .header .carousel .carousel-item h5 {
+        text-align: center;
+        font-family: $font-family-titulo;
+        color: #F28322;
+        font-size: 3em;
+    }
+
+    .header .carousel .carousel-item h3 {
+        font-size: 1em;
+        color: white;
+        margin-left: 0.5em;
+    }
+
+    .carousel-control-prev {
+        display: none;
+    }
+
+    .carousel-control-next {
+        display: none;
+    }
+
+    .footer__items i {
+        margin: 0 10px 0 10px;
+        font-size: 1em;
+        color: #F28322;
+    }
+    
+}
