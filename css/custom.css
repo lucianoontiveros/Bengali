@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
@@ -11969,21 +11970,16 @@ body {
   background-color: black;
 }
 
-.navbar__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .navbar button {
   color: #F28322;
+}
+
+.navbar b {
+  font-family: "Akshar", sans-serif;
+}
+
+.navbar span {
+  font-size: 0.5em;
 }
 
 .navbar .navbar-brand {
@@ -11994,6 +11990,11 @@ body {
 .navbar .collapse .navbar-nav a {
   font-size: 1em;
   color: #F28322;
+}
+
+.navbar .collapse .navbar-nav .active {
+  color: white;
+  font-size: 1em;
 }
 
 .navbar a i {
@@ -12108,6 +12109,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -12122,6 +12124,17 @@ body {
 
 .us__text {
   padding: 1em;
+  margin-top: 2em;
+}
+
+.us .us__text .btn-tienda {
+  background-color: #F28322;
+  color: aliceblue;
+  margin-button: 1em;
+}
+
+.us .us__text .btn-secondary {
+  margin-button: 1em;
 }
 
 .us .grande {
@@ -12132,9 +12145,306 @@ body {
   display: none;
 }
 
-.us .us__text .btn-tienda {
-  color: white;
+.contenedor {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../imagenes/Banner/banner3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../imagenes/Banner/banner3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor__formulario form {
+  color: #F28322;
+  padding: 1.5em 2em 1.5em 2em;
+  height: 80vh;
+}
+
+.contenedor__formulario form .inputBox .btn {
   background-color: #F28322;
+  color: aliceblue;
+  margin-btton: 1em;
+}
+
+/* Inicio apartado LOGIN */
+.formulario__contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../imagenes/Banner/banner3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../imagenes/Banner/banner3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 79vh;
+}
+
+.formulario__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #F2F2F2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1em;
+  background-color: #0f0f0e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 40px;
+  border: 1px solid;
+  width: 60%;
+}
+
+.formulario__login h3, .formulario__login .h3 {
+  font-size: 2em;
+  color: #F2F2F2;
+  font-family: "Akshar", sans-serif;
+}
+
+.formulario__login .inputBox {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.formulario__login .inputBox span {
+  position: absolute;
+  z-index: 100;
+  top: 15px;
+  left: 10px;
+  color: gray;
+}
+
+.formulario__login .opcion__password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
+}
+
+.formulario__login .btn {
+  font-family: "Akshar", sans-serif;
+  background-color: #F28322;
+  border-color: #F2F2F2;
+  color: #F2F2F2;
+  padding: 10px;
+  width: 100%;
+}
+
+.formulario__login .btn__login {
+  font-family: "Akshar", sans-serif;
+  background-color: grey;
+  border-color: #F2F2F2;
+  color: #F2F2F2;
+  padding: 10px;
+  width: 100%;
+}
+
+.inputBox input {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.opcion__password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.opcion__password .opcion__password-chekout {
+  margin-right: 1em;
+}
+
+/* Formulario */
+.formulario {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  color: #F2F2F2;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.904))), url("../Imagenes/header3.jpg");
+  background: linear-gradient(rgba(1, 0, 0, 0.6), rgba(0, 0, 0, 0.904)), url("../Imagenes/header3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #F2F2F2;
+  border-radius: 1em;
+}
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Aqui se manipula la casilla para rellenar */
+.formulario__grupo-input {
+  position: relative;
+}
+
+/* Aquí se gestiona lo que tiene adentro el input */
+.formulario__input {
+  width: 100%;
+  background: white;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+/* Efecto que marca el recuadro */
+.formulario__input:focus {
+  border: 3px solid #0d6efd;
+  outline: none;
+  -webkit-box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+          box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+/* Aquí gestionamos los textos de error. */
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulario__input-error-activo {
+  display: block;
+}
+
+/* Gestionamos el icono del fomulario  */
+/* La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+.formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulario__checkbox {
+  margin-right: 10px;
+}
+
+.formulario__terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+  grid-column: span 2;
+}
+
+/* mensaje de error */
+.formulario__mensaje {
+  display: none;
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.formulario__mensaje-activo {
+  display: block;
+}
+
+.formulario__mensaje p {
+  margin: 0;
+}
+
+/* Se gestiona mensaje de boton y el boton en si mismo */
+.formulario__grupo-btn-enviar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formulario__btn {
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: .1s ease all;
+  transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+  -webkit-box-shadow: 3px 0px 30px #a3a3a3;
+          box-shadow: 3px 0px 30px #a3a3a3;
+}
+
+.formulario__mensaje-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.formulario__mensaje-exito-activo {
+  display: block;
+}
+
+/* Estilas para validación */
+.formulario__grupo-correcto .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+  color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+  border: 3px solid #bb2929;
 }
 
 @media screen and (max-width: 950px) {

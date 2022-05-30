@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <link rel="icon" href="./Imagenes/brunito.ico">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./css/custom.css">
+        <script src="https://kit.fontawesome.com/d57a7b10b4.js" crossorigin="anonymous"></script>
+        <title>CASA DE ESTUDIO</title>
+    </head>
+    <body class="bodyContacto container-fluid ">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html"><i class="bi bi-wind"></i><b>BENGALÍ</b><span>Tienda</span><i class="bi bi-water"></i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-archive"></i>              
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                  <a class="nav-link" href="./tienda.html">Tienda</a>
+                  <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                  <a class="nav-link" href="./contacto.html">Contacto</a>
+                  <a class="nav-link" href="./login.html">Iniciar cuenta</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        <form action="" class="formulario" id="formulario">
+            <!-- Grupo usuario -->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="luciano.a.ontiveros">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guión bajo</p>
+            </div>
+
+            <!-- Grupo Nombre -->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Luciano Alfonso">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">El nombre ingresado no respeta el formato adecuado</p>
+            </div>
+
+            <!-- Grupo Contraseña -->
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Password</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password" id="password" placeholder="**********************">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos</p>
+            </div>
+
+            <!-- Grupo Contraseña 2-->
+            <div class="formulario__grupo" id="grupo__password2">
+                <label for="password" class="formulario__label">Repetir password</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password2" id="password2" placeholder="**********************">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">La contraseñas no coinciden</p>
+            </div>
+
+            <!-- Grupo correo electronico-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="luciano.a.ontiveros@gmail.com">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">El correo solo puede tener letras,numeros, puntos, guiones y guion bajo </p>
+            </div>
+
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="351 2612376">
+                    <i class="formulario__validacion-estado bi bi-clipboard-x-fill"></i>
+                </div>
+                <p class="formulario__input-error">El telefono solo puede contener numero y el maximo</p>
+            </div>
+
+            <!-- Grupos: Terminos y condiciones -->
+            <div class="formulario__grupo" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" >
+                    Acepto los terminos y condiciones
+                </label>
+            </div>
+            
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="bi bi-exclamation-triangle"></i> <b>Error: Por favor rellene el formulario correctamente. </b> </p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar" >
+                <button type="submit" class="formulario__btn"> ENVIAR </button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"> Formulario enviado exitosamente</p>
+            </div>
+        </form>
+
+        <footer class="footer"> 
+            <div class="footer__items">
+              <a href="http://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fmessage%2FIQ5DKNWDK7SVG1&e=ATNyFYsHcU6kxmzPMQxtDWH9PWihCSH8tOl47TKGRPdvNwrJLJZmQbwQtLTFUthY3Yjpwi6oz2QjkxsS&s=1"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="footer__items">
+              <a href="./contacto.html"><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="footer__items">
+              <a href="https://www.instagram.com/bengali.lamp/"><i class="bi bi-instagram"></i></a>
+            </div>
+        </footer>
+
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/formularios.js"></script>
+
+    </body>
+</html>

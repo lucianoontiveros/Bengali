@@ -24,18 +24,17 @@ body {
     
 }
 
-.navbar__items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
 .navbar button {
     color: #F28322;
 }
 
+.navbar b {
+    font-family: $font-family-titulo;
+}
 
+.navbar span {
+    font-size: 0.5em;
+}
 
 .navbar .navbar-brand {
     font-family: $font-family-market;
@@ -46,6 +45,11 @@ body {
 .navbar .collapse .navbar-nav a {
     font-size: 1em;
     color: #F28322;
+}
+
+.navbar .collapse .navbar-nav .active {
+    color: white;
+    font-size: 1em;
 }
 
 .navbar a i {
@@ -145,6 +149,7 @@ body {
     color: white;
     display: flex;
     flex-direction: row;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(rgba(0.3,0,0,0.3)), url(../imagenes/Banner/banner1.jpg);
@@ -154,7 +159,19 @@ body {
 
 .us__text {
     padding: 1em;
+    margin-top: 2em;
 }
+
+.us .us__text .btn-tienda  {
+    background-color: #F28322;
+    color: aliceblue;
+    margin-bottom: 1em;
+}
+
+.us .us__text .btn-secondary  {
+    margin-bottom: 1em;
+}
+
 
 .us .grande {
     padding: 1em;
@@ -164,10 +181,279 @@ body {
     display: none;
 }
 
-.us .us__text .btn-tienda {
-    color: white;
-    background-color: #F28322;
+.contenedor {
+    background: linear-gradient(rgba(0.3,0,0,0.3)), url(../imagenes/Banner/banner3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.contenedor__formulario form {
+    color: #F28322;
+    padding: 1.5em 2em 1.5em 2em;
+    height: 80vh;
+}
+
+
+
+.contenedor__formulario form .inputBox .btn{
+    background-color: #F28322;
+    color: aliceblue;
+    margin-bottom: 1em;
+}
+/* Inicio apartado LOGIN */
+
+
+
+.formulario__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(rgba(0.3,0,0,0.3)), url(../imagenes/Banner/banner3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 79vh;
+
+}
+
+.formulario__login {
+    display: flex;
+    text-align: center;
+    font-family: $font-family-base;
+    color:#F2F2F2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    background-color: #0f0f0e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    border: 1px solid;
+    width: 60%;
+}  
+
+.formulario__login h3 {
+    font-size: 2em;
+    color: #F2F2F2;
+    font-family: $font-family-titulo;
+}
+
+.formulario__login .inputBox {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.formulario__login .inputBox span {
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+    left: 10px;
+    color: gray;
+}
+
+.formulario__login .opcion__password {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+
+}
+
+.formulario__login .btn {
+    font-family: $font-family-titulo;
+    background-color: #F28322;
+    border-color:#F2F2F2;
+    color: #F2F2F2;
+    padding: 10px;
+    width: 100%;
+}
+
+.formulario__login .btn__login {
+    font-family: $font-family-titulo;
+    background-color:grey;
+    border-color:#F2F2F2;
+    color: #F2F2F2;
+    padding: 10px;
+    width: 100%;
+}
+
+.inputBox input {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.opcion__password {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.opcion__password .opcion__password-chekout {
+    margin-right: 1em;
+}
+
+
+/* Formulario */
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #F2F2F2;
+    background: linear-gradient(rgba(0.6,0,0, 0.6), rgba(0, 0, 0, 0.904)), url('../Imagenes/header3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    height: 90vh;
+    border: 1px solid #F2F2F2;
+    border-radius: 1em;
+}
+
+.formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Aqui se manipula la casilla para rellenar */
+.formulario__grupo-input {
+    position: relative;
+}
+
+/* Aquí se gestiona lo que tiene adentro el input */
+.formulario__input{
+    width: 100%;
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+/* Efecto que marca el recuadro */
+
+.formulario__input:focus {
+    border: 3px solid #0d6efd;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, .4);
+}
+
+/* Aquí gestionamos los textos de error. */
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+/* Gestionamos el icono del fomulario  */
+/* La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+.formulario__terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+/* mensaje de error */
+.formulario__mensaje {
+    display: none;
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+
+
+}
+.formulario__mensaje p {
+    margin: 0;
+}
+
+/* Se gestiona mensaje de boton y el boton en si mismo */
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1)
+}
+
+.formulario__mensaje-exito {
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/* Estilas para validación */
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
 
 
 @media screen and (max-width: 950px) {
