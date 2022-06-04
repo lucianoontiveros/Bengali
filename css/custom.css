@@ -12130,11 +12130,11 @@ body {
 .us .us__text .btn-tienda {
   background-color: #F28322;
   color: aliceblue;
-  margin-button: 1em;
+  margin-bottom: 1em;
 }
 
 .us .us__text .btn-secondary {
-  margin-button: 1em;
+  margin-bottom: 1em;
 }
 
 .us .grande {
@@ -12146,13 +12146,30 @@ body {
 }
 
 .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../imagenes/Banner/banner3.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../imagenes/Banner/banner3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.contenedor__formulario {
+  width: 80%;
+}
+
 .contenedor__formulario form {
+  padding: 0;
   color: #F28322;
   padding: 1.5em 2em 1.5em 2em;
   height: 80vh;
@@ -12161,7 +12178,7 @@ body {
 .contenedor__formulario form .inputBox .btn {
   background-color: #F28322;
   color: aliceblue;
-  margin-btton: 1em;
+  margin-bottom: 1em;
 }
 
 /* Inicio apartado LOGIN */
@@ -12445,6 +12462,84 @@ body {
 
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929;
+}
+
+/* Tienda */
+.tienda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tienda__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 15vh;
+  color: #F28322;
+  background-color: white;
+}
+
+.tienda__titulo h1, .tienda__titulo .h1 {
+  font-size: 5em;
+}
+
+.tienda__titulo span {
+  font-size: 2em;
+}
+
+.tienda__cards {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tienda__cards-cuerpo {
+  color: #F2F2F2;
+}
+
+.tienda__cards-cuerpo h5, .tienda__cards-cuerpo .h5 {
+  text-align: center;
+  margin-top: 1em;
+  color: #F28322;
+}
+
+.tienda__cards-botones {
+  background-color: #F28322;
+  width: 100%;
+}
+
+.tienda__cards-botones-black {
+  margin: .5em 0 .5em 0;
+  background-color: white;
+  width: 100%;
 }
 
 @media screen and (max-width: 950px) {
