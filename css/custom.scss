@@ -482,6 +482,7 @@ body {
     background-color: white;
 }
 
+
 .tienda__titulo h1 {
     font-size: 5em;
 }
@@ -514,11 +515,27 @@ body {
 
 }
 
+.tienda__cards-botones i {
+    width: 100%;
+    margin-right: 0.3em;
+
+}
+
+.tienda__cards-botones-black i {
+    width: 100%;
+    margin-right: 0.3em;
+
+}
+
 .tienda__cards-botones-black {
     margin: .5em 0 .5em 0;
     background-color: white;
     width: 100%;
 
+}
+
+.hover:hover {
+    color: #F2F2F2;
 }
 
 @media screen and (max-width: 950px) {
