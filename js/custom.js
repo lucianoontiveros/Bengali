@@ -1,16 +1,26 @@
 const  tienda = document.querySelector('.lista__resumen');
 const fragment = document.createDocumentFragment();
 const template = document.querySelector('.template');
-const footer = document.querySelector('.footer');
-const templateFooter = document.querySelector('.templateFooter')
+const totalCompra = document.querySelector('.totalCompra');
+const totalCompraTemplate = document.querySelector('.totalcompra__template');
 let carrito = [];
 
 
 
 document.addEventListener('click', (e) => {
-    if(e.target.matches('.producto .tienda__cards-cuerpo .tienda__cards-botones')) {
+    if(e.target.matches('.producto .tienda__cards-botones')) {
         agregarCarrito(e);
     } 
+
+/*     console.log(e.target.matches('.item__resumen-botones .botones-compra-agregar'))
+ */ 
+    if (e.target.matches('.item__resumen-botones .botones-compra-agregar ')) {
+        btnAumentar(e)
+    }
+
+    if (e.target.matches('.item__resumen-botones .botones-compra-descontar ')) {
+        btnDisminuir(e)
+    }
 
 });
 
@@ -19,7 +29,7 @@ const agregarCarrito = (e) => {
 
     const producto = {
         nombre: e.target.dataset.name,
-        Id: e.target.dataset.producto,
+        id: e.target.dataset.name,
         precio: parseInt(e.target.dataset.precio),
         cantidad: 1,
     };
@@ -46,10 +56,42 @@ const sacarCarrito = () => {
         clone.querySelector('.item__resumen-text .item__resumen_cantidad b').textContent = item.cantidad;
         clone.querySelector('.item__resumen-text .item__resumen_precio b').textContent = item.precio; 
         clone.querySelector('.item__resumen-text .item__resumen_precioTotal b').textContent = item.precio * item.cantidad;
+        clone.querySelector('.item__resumen .botones-compra-agregar ').dataset.id = item.id
+        clone.querySelector('.item__resumen .botones-compra-descontar ').dataset.id = item.id
 
         fragment.appendChild(clone);
     }),
 
     tienda.appendChild(fragment);
     
+}
+
+const btnAumentar = (e) => {
+/*     console.log('me diste click', e.target.dataset.id);
+ */
+    carrito = carrito.map( item => {
+        if(item.id == e.target.dataset.id){
+            item.cantidad ++;
+        }
+        return item
+    })
+
+    sacarCarrito();
+}
+
+const btnDisminuir = (e) => {
+    console.log('me diste click', e.target.dataset.id)
+    carrito = carrito.filter( item => {
+        if(item.id == e.target.dataset.id) {
+            if(item.cantidad > 0){
+                item.cantidad--
+                if(item.cantidad === 0) return
+                return item
+            }
+        } else {
+            return item;
+        }
+    });
+
+    sacarCarrito();
 }
