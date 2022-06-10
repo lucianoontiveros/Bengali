@@ -2,7 +2,7 @@ const  tienda = document.querySelector('.lista__resumen');
 const fragment = document.createDocumentFragment();
 const template = document.querySelector('.template');
 const totalCompra = document.querySelector('.totalCompra');
-const totalCompraTemplate = document.querySelector('.totalcompra__template');
+const totalCompraTemplate = document.querySelector('.totalCompra__template');
 let carrito = [];
 
 
@@ -42,6 +42,7 @@ const agregarCarrito = (e) => {
    }
 
    sacarCarrito();
+   
 
 }
 
@@ -63,7 +64,20 @@ const sacarCarrito = () => {
     }),
 
     tienda.appendChild(fragment);
-    
+    colocarFooter()
+}
+
+const colocarFooter = () => {
+    console.log("totalCompra")
+    totalCompra.textContent = "";
+
+    const total = carrito.reduce(
+        (acc, current) => acc + current.cantidad * current.precio, 0
+    )
+
+    const clone = totalCompraTemplate.content.cloneNode(true);
+    clone.querySelector('span').textContent = total
+    totalCompra.appendChild(clone);
 }
 
 const btnAumentar = (e) => {
@@ -77,10 +91,10 @@ const btnAumentar = (e) => {
     })
 
     sacarCarrito();
+    colocarFooter()
 }
 
 const btnDisminuir = (e) => {
-    console.log('me diste click', e.target.dataset.id)
     carrito = carrito.filter( item => {
         if(item.id == e.target.dataset.id) {
             if(item.cantidad > 0){
@@ -94,4 +108,6 @@ const btnDisminuir = (e) => {
     });
 
     sacarCarrito();
+    colocarFooter()
 }
+

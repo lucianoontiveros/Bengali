@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <section class="tienda">
+    <section class="tienda container">
 
       <div class="tienda__titulo">
         <h1>BENGALI</h1><span>Tienda</span>
@@ -38,7 +38,7 @@
 
     </section>
 
-    <div class="tienda__cards" id="comprando">
+    <div class="tienda__cards container " id="comprando">
         
       <div class="producto bombitas" style="width: 22rem;">
         <img src="./imagenes/Productos/Bombita/bombita1.png" class="card-img-top" alt="...">
@@ -249,18 +249,18 @@
     </template>
 
     <div class="totalCompra container mt-3">
-      <template class="totalcompra__template">
-        <div class="item__resumen">
-          <div class="item__resumen-text">
-            <p class="lead">Total Compra $ <span>1500</span></p>
-          </div>
-          <div class="item__resumen-botones">
-            <button class="btn tienda__cards-botones">Finalizar compra</button>
-          </div>
-        </div>
-      </template>
     </div>
 
+    <template class="totalCompra__template">
+      <div class="item__resumen">
+        <div class="item__resumen-text">
+          <p class="lead">Total Compra $ <span>1500</span></p>
+        </div>
+        <div class="item__resumen-botones">
+          <button class="btn tienda__cards-botones">Finalizar compra</button>
+        </div>
+      </div>
+    </template>
 
 
     <footer class="footer"> 
